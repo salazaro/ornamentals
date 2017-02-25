@@ -18,11 +18,17 @@
     <link href="<?=base_url();?>bootstrap/Login/css/ie10-viewport-bug-workaround.css" rel="stylesheet">   <!-- FATLA ESTE ARCHIVO BUSCARLO PORINTERNET -->
 
     <!-- Custom styles for this template -->
-    <link href="ornamentals.css" rel="stylesheet">   <!-- <link href="signin.css" rel="stylesheet">  -->
+    <link href="<?=base_url();?>bootstrap/Login/css/ornamentals.css" rel="stylesheet"> <!-- ESTO CAMBIE para solo de esa pagina --> <!-- <link href="signin.css" rel="stylesheet">  -->    <!-- ESTE CSS LO AGREGUE Y SI TUBIERA ALGO PRIMERO LO EJECUTA Y DESPUES LOS OTROS CSS -->
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="<?=base_url();?>bootstrap/Login/js/ie-emulation-modes-warning.js"></script>     <!-- ESTO CAMBIE -->
+    <script src="<?=base_url();?>bootstrap/Login/js/ie-emulation-modes-warning.js"></script> 
+    <script src="<?=base_url();?>bootstrap/Login/js/bootstrap.js"></script>
+     <script src="<?=base_url();?>bootstrap/Login/js/bootstrap.min.js"></script>
+      <script src="<?=base_url();?>bootstrap/Login/js/npm.js"></script>
+      <script src="<?=base_url();?>bootstrap/Login/js/jquery-3.1.1.js"></script>
+    
+        <!-- ESTO CAMBIE -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,21 +39,63 @@
 
   <body>
 
+
+<!-- Esto agregue para las columnas y centar dependiento tamaño de pantalla -->
     <div class="container">
 
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ORNACOL</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Inicio</a></li>
+              <li><a href="#">Mis Viveros</a></li>
+              <li><a href="#">Mis Cultivos</a></li>
+               <li><a href="#">Trazabilidad</a></li>
+              <li class="dropdown">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+  </ul>
+              </li>
+            </ul>
+           
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+     <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lx-4 col-lx-offset-4">
+
+
+
       <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
+        <h2 class="form-signin-heading">Introduce tus credenciales</h2>
+        <label for="inputEmail" class="sr-only">Correo electrónico</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me"> Recordarme
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
+    </div>
+  </div>
 
     </div> <!-- /container -->
 
